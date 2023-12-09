@@ -78,7 +78,24 @@ namespace ObjectSender
                 }
                 catch (Exception)
                 {
-                    return 0;
+                    string[] gg = txtEkran.Text.Split('/');
+                    decimal sonuc = 0;
+                    if (gg[0] == "")
+                        gg[0] = "0";
+                    else
+                        sonuc = Convert.ToDecimal(gg[0]);
+                    try
+                    {
+                        for (int i = 1; i <= gg.Length - 1; i++)
+                        {
+                            sonuc = sonuc / Convert.ToDecimal(gg[i]);
+                        }
+                        return sonuc;
+                    }
+                    catch (Exception)
+                    {
+                        return 0;
+                    }
                 }
             }
             return 0;
@@ -97,7 +114,24 @@ namespace ObjectSender
                 }
                 catch (Exception)
                 {
-                    return 0;
+                    string[] gg = txtEkran.Text.Replace("*","x").Split('x');
+                    decimal sonuc = 0;
+                    if (gg[0] == "")
+                        gg[0] = "0";
+                    else
+                        sonuc = Convert.ToDecimal(gg[0]);
+                    try
+                    {
+                        for (int i = 1; i <= gg.Length - 1; i++)
+                        {
+                            sonuc = sonuc * Convert.ToDecimal(gg[i]);
+                        }
+                        return sonuc;
+                    }
+                    catch (Exception)
+                    {
+                        return 0;
+                    }
                 }
             }
             return 0;
@@ -116,7 +150,24 @@ namespace ObjectSender
                 }
                 catch (Exception)
                 {
-                    return 0;
+                    string[] gg = txtEkran.Text.Split('-');
+                    decimal sonuc = 0;
+                    if (gg[0] == "")
+                        gg[0] = "0";
+                    else
+                        sonuc = Convert.ToDecimal(gg[0]);
+                    try
+                    {
+                        for (int i = 1; i <= gg.Length - 1; i++)
+                        {
+                            sonuc = sonuc - Convert.ToDecimal(gg[i]);
+                        }
+                        return sonuc;
+                    }
+                    catch (Exception)
+                    {
+                        return 0;
+                    }
                 }
             }
             return 0;
@@ -135,7 +186,24 @@ namespace ObjectSender
                 }
                 catch (Exception)
                 {
-                    return 0;
+                    string[] gg = txtEkran.Text.Split('+');
+                    decimal sonuc = 0;
+                    if (gg[0] == "")
+                        gg[0] = "0";
+                    else
+                        sonuc = Convert.ToDecimal(gg[0]);
+                    try
+                    {
+                        for (int i = 1; i <= gg.Length - 1; i++)
+                        {
+                            sonuc = sonuc + Convert.ToDecimal(gg[i]);
+                        }
+                        return sonuc;
+                    }
+                    catch (Exception)
+                    {
+                        return 0;
+                    }
                 }
             }
             return 0;
