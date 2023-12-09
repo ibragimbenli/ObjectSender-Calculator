@@ -41,6 +41,10 @@ namespace ObjectSender
         }
         private void btnSonuc_Click(object sender, EventArgs e)
         {
+
+            if (txtEkran.Text.Substring(txtEkran.Text.Length - 1, 1) == "/" || txtEkran.Text.Substring(txtEkran.Text.Length - 1, 1) == "*" || txtEkran.Text.Substring(txtEkran.Text.Length - 1, 1) == "-" || txtEkran.Text.Substring(txtEkran.Text.Length - 1, 1) == "+" || txtEkran.Text.Substring(txtEkran.Text.Length - 1, 1) == "x")
+                txtEkran.Text = txtEkran.Text.Substring(0, txtEkran.Text.Length - 1);
+
             if (btnSonuc == sender && txtEkran.Text.Contains("/"))
             {
                 txtEkran.Text = Bol(btnBol).ToString();
@@ -58,7 +62,7 @@ namespace ObjectSender
                 txtEkran.Text = Topla(btnTopla).ToString();
             }
             else
-                txtEkran.Text = string.Empty;
+                txtEkran.Text = txtEkran.Text;
         }
         private decimal Bol(object sender)
         {
@@ -124,8 +128,7 @@ namespace ObjectSender
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != '/' && e.KeyChar != '*' && e.KeyChar != '-' && e.KeyChar != '+' && e.KeyChar != ',')
             {
-                e.Handled = true; // Etkisizleştir
-
+                e.Handled = true; //Etkisizleştir
             }
         }
     }

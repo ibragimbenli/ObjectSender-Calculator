@@ -103,6 +103,8 @@
             // 
             // txtEkran
             // 
+            this.txtEkran.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtEkran.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEkran.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEkran.Location = new System.Drawing.Point(36, 26);
             this.txtEkran.Multiline = true;
