@@ -68,11 +68,18 @@ namespace ObjectSender
         {
             if (btnBol == sender)
             {
-                int index = txtEkran.Text.IndexOf("/");
-                decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
-                decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
-                decimal snc = Math.Round(deger1 / deger2, 4);
-                return (decimal)snc;
+                try
+                {
+                    int index = txtEkran.Text.IndexOf("/");
+                    decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
+                    decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
+                    decimal snc = Math.Round(deger1 / deger2, 4);
+                    return (decimal)snc;
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
             }
             return 0;
         }
@@ -80,11 +87,18 @@ namespace ObjectSender
         {
             if (btnCarp == sender)
             {
-                int index = txtEkran.Text.Replace("*", "x").IndexOf("x");
-                decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
-                decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
-                decimal snc = Math.Round(deger1 * deger2, 4);
-                return (decimal)snc;
+                try
+                {
+                    int index = txtEkran.Text.Replace("*", "x").IndexOf("x");
+                    decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
+                    decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
+                    decimal snc = Math.Round(deger1 * deger2, 4);
+                    return (decimal)snc;
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
             }
             return 0;
         }
@@ -92,11 +106,18 @@ namespace ObjectSender
         {
             if (btnCikar == sender)
             {
-                int index = txtEkran.Text.IndexOf("-");
-                decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
-                decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
-                decimal snc = Math.Round(deger1 - deger2, 4);
-                return (decimal)snc;
+                try
+                {
+                    int index = txtEkran.Text.IndexOf("-");
+                    decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
+                    decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
+                    decimal snc = Math.Round(deger1 - deger2, 4);
+                    return (decimal)snc;
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
             }
             return 0;
         }
@@ -104,11 +125,18 @@ namespace ObjectSender
         {
             if (btnTopla == sender)
             {
-                int index = txtEkran.Text.IndexOf("+");
-                decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
-                decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
-                decimal snc = Math.Round(deger1 + deger2, 4);
-                return (decimal)snc;
+                try
+                {
+                    int index = txtEkran.Text.IndexOf("+");
+                    decimal deger1 = Convert.ToDecimal(txtEkran.Text.Substring(0, index));
+                    decimal deger2 = Convert.ToDecimal(txtEkran.Text.Substring((index + 1), (txtEkran.Text.Length - (index + 1))));
+                    decimal snc = Math.Round(deger1 + deger2, 4);
+                    return (decimal)snc;
+                }
+                catch (Exception)
+                {
+                    return 0;
+                }
             }
             return 0;
         }

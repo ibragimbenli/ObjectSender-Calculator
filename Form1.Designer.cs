@@ -111,6 +111,7 @@
             this.txtEkran.Name = "txtEkran";
             this.txtEkran.Size = new System.Drawing.Size(216, 52);
             this.txtEkran.TabIndex = 0;
+            this.txtEkran.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtEkran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEkran_KeyPress);
             // 
             // btn2
